@@ -1,0 +1,36 @@
+### VNPAY Email System - API Test Requests
+
+### Test 1: Send email directly (sync)
+GET http://localhost:8000/test-email/1
+Accept: application/json
+
+### Test 2: Preview email HTML
+GET http://localhost:8000/test-email/preview/1
+
+### Test 3: Send via Job (async)
+GET http://localhost:8000/test-email/1/job
+Accept: application/json
+
+### Test 4: Send sync explicitly
+GET http://localhost:8000/test-email/1/sync
+Accept: application/json
+
+### Test 5: Mock VNPAY payment callback
+GET http://localhost:8000/test-vnpay-return?order_id=1
+Accept: application/json
+
+### Test 6: View logs
+GET http://localhost:8000/test-logs
+Accept: application/json
+
+### Test 7: Check queue status
+GET http://localhost:8000/test-queue-status
+Accept: application/json
+
+---
+# Usage in REST Client (VSCode extension)
+
+# Install: REST Client extension
+# Then use Ctrl+Alt+R or Cmd+Alt+R to send requests
+
+# Or save as .http file and use VSCode REST Client
